@@ -2,19 +2,19 @@ import { Container, Row, Col } from 'reactstrap';
 
 //Import Assets
 
-import mainLogo from '../../assets/images/logo.svg';
-import whiteLogo from '../../assets/images/logo-white.svg';
 import callLogo from '../../assets/images/arrows/phone.svg';
 import quoteImage from '../../assets/images/arrows/quote.png';
-import aboutImage1 from '../../assets/images/about/about.png';
 import servicesIcon1 from '../../assets/images/services/1.svg';
 import servicesIcon2 from '../../assets/images/services/2.svg';
 import servicesIcon3 from '../../assets/images/services/3.svg';
+import servicesImage1 from '../../assets/images/services/1.jpg';
+import servicesImage2 from '../../assets/images/services/2.jpg';
+import servicesImage3 from '../../assets/images/services/3.jpg';
+import servicesImage4 from '../../assets/images/services/4.jpg';
+import servicesRightShape from '../../assets/images/services/services-right-shape.png';
+import aboutImage1 from '../../assets/images/about/about1.png';
+import aboutRightShape from '../../assets/images/about/about-right-shape.png';
 import videoIcon from '../../assets/images/video-icon.svg';
-import videoBg from '../../assets/images/bg/video-bg.png';
-import featureImage1 from '../../assets/images/features/1.jpg';
-import featureImage2 from '../../assets/images/features/2.jpg';
-import featureImage3 from '../../assets/images/features/3.jpg';
 import teamImage1 from '../../assets/images/team/1.png';
 import teamImage2 from '../../assets/images/team/2.png';
 import teamImage3 from '../../assets/images/team/3.png';
@@ -33,13 +33,10 @@ function HomePage() {
 			        <div className="menu-bar menu-sticky">
 			            <Container>
 			                <Row>
-			                    <Col lg="3">
+			                    <Col lg="1">
 			                        <div className="logo">
 			                            <a href="#">
-			                                <img 
-			                                	src={whiteLogo} 
-			                                	alt="White Logo" 
-			                                />
+			                                <span>EMedical</span>
 			                            </a>
 			                        </div>
 			                        <button 
@@ -51,72 +48,103 @@ function HomePage() {
 			                            <span></span>
 			                        </button>
 			                    </Col>
-			                    <Col lg="9">
+			                    <Col lg="11">
 			                        <div className="mainmenu">
-			                            <ul className="nav-menu">
+			                            <ul id="onepage-menu" className="nav-menu onepage-menu">
 			                                <li><a href="#tcd-banner">Home</a></li>
 
 			                                <li><a href="#tcd-about">About</a></li>
 
 			                                <li><a href="#tcd-services">Services</a></li>
 
-			                                <li><a href="#tcd-features">Features</a></li>
+			                                <li><a href="#tcd-team">Team</a></li>
 
 			                                <li><a href="#tcd-blog">Blog</a></li>
 
 			                                <li><a href="#tcd-footer">Contact</a></li>
 			                            </ul>
-			                            <div className="contact-menu">
-			                                <span className="icon">
-			                                	<img 
-			                                		src={callLogo} 
-			                                		alt="Phone Icon" 
-			                                	/> 
-			                                </span>
-			                                <div className="contact-number">
-			                                    <span>
-			                                    	<a 
-				                                    	className="phone" 
-				                                    	href="tel:01234567"
-				                                    >
-				                                    	(+1) 212-946-2707
-			                                    	</a>
-			                                    </span>
-			                                    <span>
-			                                    	Opening Hours 09-05
-			                                    </span>
-			                                </div>
-			                            </div>
+			                            <div className="contact-menu hidden-md">
+                                            <span className="icon">
+                                            	<img 
+                                            		src={callLogo}
+                                            		alt="Phone Icon"
+                                            	/> 
+                                            </span>
+                                            <div className="contact-number">
+                                                <span>Call Us</span>
+                                                <span>
+                                                	<a 
+                                                		className="phone" 
+                                                		href="tel:01234567"
+                                                	>
+                                                		+088-123456
+                                                	</a>
+                                                </span>
+                                            </div>
+                                        </div>
+			                        </div>
+			                        <div className="search hidden-md">
+			                        	<a 
+			                        		className="tc-search" 
+			                        		data-target=".search-modal" 
+			                        		data-toggle="modal" 
+			                        		href="#"
+			                        	>
+			                        		<i className="fa fa-search"></i>
+			                        	</a>
 			                        </div>
 			                    </Col>
 			                </Row>
 			            </Container>
-			            <div className="menu-bg hidden-md"></div>
 			        </div>
 			    </header>
 
 				{/* Banner Wrapper Part */}
 			    <div className="banner-wrapper">
 			        <Container>
-			            <div className="banner-slider">
+			            <div className="banner-part">
 			                <div className="banner-content text-center">
+				                <div className="video-icon">
+				                    <a 
+				                    	className="video-play-button" 
+				                    	href="#"
+				                    >
+				                        <img 
+				                        	src={videoIcon}
+				                        	alt="Video Icon"
+				                        />
+				                    </a>
+				                </div>
+			                    <h5 className="banner-subtitle">
+			                        Best Medical Theme Ever
+			                    </h5>
 			                    <h2 className="banner-title uppercase">
-			                        We are Financial Experts Boost Your Business! Right Now
+			                        Providing Health Solution
 			                    </h2>
-			                    <h5 className="banner-desc">Over 24 years experience and knowledge international...</h5>
+			                    <p className="banner-desc">
+			                    	A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which
+			                    </p>
 			                    <div className="banner-btn">
 			                        <a 
 			                        	href="#" 
-			                        	className="primary-btn mr-30"
+			                        	className="primary-btn white-btn"
 			                        >
 			                        	Read More
 			                        </a>
-			                        <a 
-			                        	href="#" 
-			                        	className="primary-btn transparent"
-			                        >
-			                        	View Details
-			                        </a>
+			                    </div>
+			                    <div className="banner-newsletter">
+			                        <form className="mb-0">
+			                            <div className="form-group mb-0">
+			                                <input 
+			                                	type="email" 
+			                                	name="your-email" 
+			                                	placeholder="Appointment Now"
+			                                />
+			                                <button className="btn-newsletter">
+			                                	Book Now
+			                                </button>
+			                            </div>
+			                        </form>
 			                    </div>
 			                </div>
 			            </div>
@@ -124,10 +152,68 @@ function HomePage() {
 			    </div>
 			</div>
 
+			{/* Service Part */}
+			<div id="tcd-services" className="tcd-services">
+			    <Container>
+			        <div className="sec-title center mb-40">
+			            <h2 className="title mb-20">Our Specialist</h2>
+			            <p className="desc mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit <br />veniam quis nostrud exercitation...</p>
+			        </div>
+			        <Row>
+			            <Col lg="9" md="12">
+			                <div className="single-services mb-70 sm-mb-50">
+			                    <div className="services-icon">
+			                        <img 
+			                        	src={servicesIcon1} 
+			                        	alt="Service Icon"
+			                        />
+			                    </div>
+			                    <div className="services-text">
+			                        <h3 className="title"><a href="#">Medical Investigation</a></h3>
+			                        <p className="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit <br />veniam quis nostrud exercitation...</p>
+			                    </div>
+			                </div>
+
+			                <div className="single-services left-gap mb-70 sm-mb-50">
+			                    <div className="services-icon">
+			                        <img 
+			                        	src={servicesIcon2} 
+			                        	alt="Service Icon"
+			                        />
+			                    </div>
+			                    <div className="services-text">
+			                        <h3 className="title"><a href="#">Admission</a></h3>
+			                        <p className="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit <br />veniam quis nostrud exercitation...</p>
+			                    </div>
+			                </div>
+
+			                <div className="single-services">
+			                    <div className="services-icon">
+			                        <img 
+			                        	src={servicesIcon3} 
+			                        	alt="Service Icon"
+			                        />
+			                    </div>
+			                    <div className="services-text">
+			                        <h3 className="title"><a href="#">Dedicated Lounge</a></h3>
+			                        <p className="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit <br />veniam quis nostrud exercitation...</p>
+			                    </div>
+			                </div>
+			            </Col>
+			        </Row>
+			    </Container>
+			    <div className="shape-img hidden-md">
+			        <img 
+			        	src={servicesRightShape} 
+			        	alt="Services Shape Image"
+			        />
+			    </div>
+			</div>
+
 			{/* About Part */}
-			<div id="tcd-about" className="tcd-about sec-spacer">
+			<div id="tcd-about" className="tcd-about">
 			    <Row className="align-items-center margin-0">
-			        <Col lg="6" className="padding-0 d-none d-xl-block d-lg-block d-xl-none">
+			        <Col lg="6" className="padding-0 md-mb-50">
 			            <div className="about-img">
 			                <img 
 			                	src={aboutImage1}
@@ -135,154 +221,219 @@ function HomePage() {
 			                />
 			            </div>
 			        </Col>
-			        <Col lg="6" className="padding-0">
-			            <div className="about-content">
-			                <h2 className="mb-25">Learn About Us</h2>
-			                <p className="mb-20">A collection of textile samples lay spread out on the table - Samsa was a travelling
-			                    salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine
-			                    and housed in a nice.</p>
-			                <p className="mb-0">It showed a lady fitted out with a fur hat and fur boa who sat upright</p>
+			        <Col lg="6">
+			            <div className="about-text">
+				            <div className="sec-title left-shape">
+				                <h2 className="title mb-20">Why Is Medical</h2>
+				                <h4 className="subtitle mb-50">Lorem ipsum dolor sit amet consectetur adipisicing elit...</h4>
+				            </div>
+				            <ul className="listing mb-50">
+				                <li>Feel like you are at Home Services.</li>
+				                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+				                <li>Medicies And Drug Store</li>
+				                <li>Feel like Home Services</li>
+				                <li>Save your Money and Time with us</li>
+				                <li>Easy and Affordable Billing</li>
+				                <li>Last list item or something</li>
+				            </ul>
+				            <div className="about-btn">
+				                <a className="primary-btn" href="#">View More Details</a>
+				            </div>
 			            </div>
 			        </Col>
 			    </Row>
+			    <div className="shape-img hidden-md">
+			        <img 
+			        	src={aboutRightShape} 
+			        	alt="About Shape Image"
+			        />
+			    </div>
 			</div>
 
 			{/* Service Part */}
-			<div id="tcd-services" className="tcd-services">
+			<div id="tcd-services" className="tcd-services-tab pt-110 md-pt-70">
 			    <Container>
-			        <div className="sec-title top-border text-center pb-120">
-			            <h2 className="title">Services We Provide</h2>
-			            <p className="desc">There are many variation passages of Lorem Ipsum There are many variation passages of Lorem Ipsum <br />passages of LoremIpsum available passages of LoremIpsum available...</p>
+			        <div className="tcd-nav-part gray-bg">
+	                    <ul className="nav nav-tabs tcd-nav-tabs">
+	                        <li><a className="active show" data-toggle="tab" href="#one">Orthopaedics</a></li>
+	                        <li><a data-toggle="tab" href="#two">Cardiology</a></li>
+	                        <li><a data-toggle="tab" href="#three">Neurology</a></li>
+	                        <li><a data-toggle="tab" href="#four">Haematology</a></li>
+	                    </ul>
+	                </div>
+			        <div className="tab-content tcd-tab-content">
+			            <div id="one" className="single-tab-part tab-pane fade active show">
+			                <Row className="align-items-center">
+			                    <Col>
+			                        <div className="single-tab">                                    
+			                            <div className="img-part">
+			                                <img 
+			                                	src={servicesImage1}
+			                                	alt="Services Image"
+			                                />
+			                            </div>
+			                        </div>
+			                    </Col>
+			                    <Col>
+			                        <div className="service-content">
+			                            <div className="service-categories">
+			                                <span className="subtitle">Services</span>
+			                                <span className="title">Orthopaedics</span>
+			                            </div>
+			                            <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione tempora consectetur quos minus ut quo nulla ipsa aliquid neque molestias et qui sunt. Odit, molestiae.</p>
+			                            <div className="row">
+			                                <div className="col-sm-6">
+			                                    <ul className="listing mt-10">
+			                                        <li>Qualified Doctors</li>
+			                                        <li>24×7 Emergency Services</li>
+			                                        <li>General Medical</li>
+			                                    </ul>
+			                                </div>
+			                                <div className="col-sm-6">
+			                                    <ul className="listing mt-10 xs-mt-0">
+			                                        <li>Feel like Home Services</li>
+			                                        <li>Outdoor Checkup</li>
+			                                        <li>Easy and Affordable Billing</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                            <a className="primary-btn mt-30" href="#">View Details</a>
+			                        </div>
+			                    </Col>
+			                </Row>
+			            </div>
+			            <div id="two" className="single-tab-part tab-pane fade">
+			                <Row className="align-items-center">
+			                    <Col>
+			                        <div className="single-tab">
+			                            <div className="img-part">
+			                                <img 
+			                                	src={servicesImage2}
+			                                	alt="Services Image"
+			                                />
+			                            </div>
+			                        </div>
+			                    </Col>
+			                    <Col>
+			                        <div className="service-content">
+			                            <div className="service-categories">
+			                                <span className="subtitle">Services</span>
+			                                <span className="title">Cardiology</span>
+			                            </div>
+			                            <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione tempora consectetur quos minus ut quo nulla ipsa aliquid neque molestias et qui sunt. Odit, molestiae.</p>
+			                            <div className="row">
+			                                <div className="col-sm-6">
+			                                    <ul className="listing mt-10">
+			                                        <li>Qualified Doctors</li>
+			                                        <li>24×7 Emergency Services</li>
+			                                        <li>General Medical</li>
+			                                    </ul>
+			                                </div>
+			                                <div className="col-sm-6">
+			                                    <ul className="listing mt-10 xs-mt-0">
+			                                        <li>Feel like Home Services</li>
+			                                        <li>Outdoor Checkup</li>
+			                                        <li>Easy and Affordable Billing</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                            <a className="primary-btn mt-30" href="#">View Details</a>
+			                        </div>
+			                    </Col>
+			                </Row>
+			            </div>
+			            <div id="three" className="single-tab-part tab-pane fade">
+			                <Row className="align-items-center">
+			                    <Col>
+			                        <div className="single-tab">
+			                            <div className="img-part">
+			                                <img 
+			                                	src={servicesImage3}
+			                                	alt="Services Image"
+			                                />
+			                            </div>
+			                        </div>
+			                    </Col>
+			                    <Col>
+			                        <div className="service-content">
+			                            <div className="service-categories">
+			                                <span className="subtitle">Services</span>
+			                                <span className="title">Neurology</span>
+			                            </div>
+			                            <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione tempora consectetur quos minus ut quo nulla ipsa aliquid neque molestias et qui sunt. Odit, molestiae.</p>
+			                            <div className="row">
+			                                <div className="col-sm-6">
+			                                    <ul className="listing mt-10">
+			                                        <li>Qualified Doctors</li>
+			                                        <li>24×7 Emergency Services</li>
+			                                        <li>General Medical</li>
+			                                    </ul>
+			                                </div>
+			                                <div className="col-sm-6">
+			                                    <ul className="listing mt-10 xs-mt-0">
+			                                        <li>Feel like Home Services</li>
+			                                        <li>Outdoor Checkup</li>
+			                                        <li>Easy and Affordable Billing</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                            <a className="primary-btn mt-30" href="#">View Details</a>
+			                        </div>
+			                    </Col>
+			                </Row>
+			            </div>
+			            <div id="four" className="single-tab-part tab-pane fade">
+			                <Row className="align-items-center">
+			                    <Col>
+			                        <div className="single-tab">
+			                            <div className="img-part">
+			                                <img 
+			                                	src={servicesImage4}
+			                                	alt="Services Image"
+			                                />
+			                            </div>
+			                        </div>
+			                    </Col>
+			                    <Col>
+			                        <div className="service-content">
+			                            <div className="service-categories">
+			                                <span className="subtitle">Services</span>
+			                                <span className="title">Haematology</span>
+			                            </div>
+			                            <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione tempora consectetur quos minus ut quo nulla ipsa aliquid neque molestias et qui sunt. Odit, molestiae.</p>
+			                            <div className="row">
+			                                <div className="col-sm-6">
+			                                    <ul className="listing mt-10">
+			                                        <li>Qualified Doctors</li>
+			                                        <li>24×7 Emergency Services</li>
+			                                        <li>General Medical</li>
+			                                    </ul>
+			                                </div>
+			                                <div className="col-sm-6">
+			                                    <ul className="listing mt-10 xs-mt-0">
+			                                        <li>Feel like Home Services</li>
+			                                        <li>Outdoor Checkup</li>
+			                                        <li>Easy and Affordable Billing</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                            <a className="primary-btn mt-30" href="#">View Details</a>
+			                        </div>
+			                    </Col>
+			                </Row>
+			            </div>
 			        </div>
-			        <Row>
-			            <Col className="md-mt-80">
-			                <div className="single-service">
-			                    <div className="service-icon">
-			                        <img 
-			                        	src={servicesIcon1} 
-			                        	alt="Service Icon"
-			                        />
-			                    </div>
-			                    <div className="service-text">
-			                        <h4 className="title"><a href="#">Best Industry Leaders</a></h4>
-			                        <p className="desc">There are many variation passages of sum passages available there are many variation passages take some moment available.</p>
-			                    </div>
-			                </div>
-			            </Col>
-			            <Col className="md-mt-80">
-			                <div className="single-service">
-			                    <div className="service-icon">
-			                        <img 
-			                        	src={servicesIcon2}
-			                        	alt="Service Icon"
-			                        />
-			                    </div>
-			                    <div className="service-text">
-			                        <h4 className="title"><a href="#">Finance Management</a></h4>
-			                        <p className="desc">There are many variation passages of sum passages available there are many variation passages take some moment available.</p>
-			                    </div>
-			                </div>
-			            </Col>
-			            <Col>
-			                <div className="single-service">
-			                    <div className="service-icon">
-			                        <img 
-			                        	src={servicesIcon3} 
-			                        	alt="Service Icon"
-			                        />
-			                    </div>
-			                    <div className="service-text">
-			                        <h4 className="title"><a href="#">Business Insurance</a></h4>
-			                        <p className="desc">There are many variation passages of sum passages available there are many variation passages take some moment available.</p>
-			                    </div>
-			                </div>
-			            </Col>
-			        </Row>
-			    </Container>
-			</div>
-
-			{/* Video Part */}
-			<div id="tcd-video-area" className="tcd-video-area">
-			    <div className="video-img">
-			        <img 
-			        	src={videoBg} 
-			        	alt="Video Bg Image" 
-			        />
-			    </div>
-			    <div className="video-icon">
-			        <a 
-			        	id="play-home-video" 
-			        	className="video-play-button"
-			        	href="#"
-			        >
-				        <img 
-				        	src={videoIcon} 
-				        	alt="Video Icon"
-				        />
-			        </a>
-			        <p className="video-txt">Just as AMC Theaters took advantage</p>
-			    </div>
-			</div>
-
-			{/* Feature Part */}
-			<div id="tcd-features" className="tcd-features sec-spacer">
-			    <Container>
-			        <div className="sec-title top-border text-center pb-75 md-pb-50">
-			            <h2 className="title">Our Best Feature</h2>
-			            <p className="desc">There are many variation passages of Lorem Ipsum There are many variation passages of Lorem Ipsum <br />passages of LoremIpsum available passages of LoremIpsum available...</p>
-			        </div>
-			        <Row className="feature-slider">
-			            <Col className="feature-item">
-			                <div className="feature-img">
-			                    <img 
-			                    	src={featureImage1} 
-			                    	alt="Image Alt"
-			                    />
-			                </div>
-			                <div className="feature-text">
-			                    <span className="water-text">01</span>
-			                    <h4 className="title"><a href="#">Materials Technology</a></h4>
-			                    <span className="desc">Aliquet quia autem maecenas, digniss inceptos axime eveniet</span>
-			                </div>
-			            </Col>
-			            <Col className="feature-item">
-			                <div className="feature-img">
-			                    <img 
-			                    	src={featureImage2}
-			                    	alt="Image Alt"
-			                    />
-			                </div>
-			                <div className="feature-text">
-			                    <span className="water-text">02</span>
-			                    <h4 className="title"><a href="#">Startup Funding</a></h4>
-			                    <span className="desc">Relique quia autem maecenas, digniss inceptos axime eveniet</span>
-			                </div>
-			            </Col>
-			            <Col className="feature-item">
-			                <div className="feature-img">
-			                    <img 
-			                    	src={featureImage3}
-			                    	alt="Image Alt" 
-			                    />
-			                </div>
-			                <div className="feature-text">
-			                    <span className="water-text">03</span>
-			                    <h4 className="title"><a href="#">Business Matching</a></h4>
-			                    <span className="desc">Vermoes quia autem maecenas, digniss inceptos axime necto</span>
-			                </div>
-			            </Col>
-			        </Row>
 			    </Container>
 			</div>
 
 			{/* Team Part */}
-			<div id="tcd-team" className="tcd-team">
+			<div id="tcd-team" className="tcd-team pt-110 pb-110 md-pt-70 md-pb-70">
 			    <Container>
-			        <div className="sec-title top-border text-center pb-75 md-pb-50">
-			            <h2 className="title">Developing Team</h2>
-			            <p className="desc">There are many variation passages of Lorem Ipsum There are many variation passages of Lorem Ipsum <br />passages of LoremIpsum available passages of LoremIpsum available...</p>
+			        <div className="sec-title center mb-40">
+			            <h2 className="title mb-20">Our Specialist</h2>
+			            <p className="desc mb-0">There are many variation passages of Lorem Ipsum There are many variation passages of Lorem Ipsum <br />Lorem ipsum dolor sit amet consectetur adipisicing elit <br />veniam quis nostrud exercitation...</p>
 			        </div>
-			        <Row className="team-slider">
+			        <Row className="team-member">
 			        	<Col> 
 			        		<div className="single-team">
 			        		    <div className="team-img">
@@ -290,179 +441,68 @@ function HomePage() {
 			        		        	src={teamImage1}
 			        		        	alt="Team Image"
 			        		        />
-			        		    </div>
-			        		    <div className="team-text">
-			        		        <a href="#" className="title">Herman Sheffield</a>
-			        		        <span className="designation">Designer</span>
-			        		        <div className="hidden-content">
-			        		            <span className="desc">Aenean animi error sint iusto hynae</span>
-			        		            <ul className="social-icon">
-			        		                <li><a href="#"><i className="fa fa-google"></i></a></li>
-			        		                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-			        		                <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-			        		            </ul>
+			        		        <div className="team-info">
+			        		            <h3 className="title"><a href="#">Mira Smith</a></h3>
+			        		            <p className="post">Heart Specialist</p>
 			        		        </div>
 			        		    </div>
+			        		    <div className="team-desc">
+			        		        <p className="desc">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculusmus. Donec quam felis...</p>
+			        		    </div>
+			        		    <ul className="social-info">
+			        		        <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
+			        		        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+			        		        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+			        		        <li><a href="#"><i className="fa fa-vimeo"></i></a></li>
+			        		    </ul>
 			        		</div>
 			        	</Col>
 			        	<Col> 
 			        		<div className="single-team">
 			        		    <div className="team-img">
 			        		        <img 
-			        		        	src={teamImage2}
+			        		        	src={teamImage1}
 			        		        	alt="Team Image"
 			        		        />
-			        		    </div>
-			        		    <div className="team-text">
-			        		        <a href="#" className="title">Paul Walker</a>
-			        		        <span className="designation">Designer</span>
-			        		        <div className="hidden-content">
-			        		            <span className="desc">Aenean animi error sint iusto hynae</span>
-			        		            <ul className="social-icon">
-			        		                <li><a href="#"><i className="fa fa-google"></i></a></li>
-			        		                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-			        		                <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-			        		            </ul>
+			        		        <div className="team-info">
+			        		            <h3 className="title"><a href="#">Mira Smith</a></h3>
+			        		            <p className="post">Heart Specialist</p>
 			        		        </div>
 			        		    </div>
+			        		    <div className="team-desc">
+			        		        <p className="desc">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculusmus. Donec quam felis...</p>
+			        		    </div>
+			        		    <ul className="social-info">
+			        		        <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
+			        		        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+			        		        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+			        		        <li><a href="#"><i className="fa fa-vimeo"></i></a></li>
+			        		    </ul>
 			        		</div>
 			        	</Col>
 			        	<Col> 
 			        		<div className="single-team">
 			        		    <div className="team-img">
 			        		        <img 
-			        		        	src={teamImage3}
+			        		        	src={teamImage1}
 			        		        	alt="Team Image"
 			        		        />
-			        		    </div>
-			        		    <div className="team-text">
-			        		        <a href="#" className="title">Kory Anderson</a>
-			        		        <span className="designation">Designer</span>
-			        		        <div className="hidden-content">
-			        		            <span className="desc">Aenean animi error sint iusto hynae</span>
-			        		            <ul className="social-icon">
-			        		                <li><a href="#"><i className="fa fa-google"></i></a></li>
-			        		                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-			        		                <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-			        		            </ul>
+			        		        <div className="team-info">
+			        		            <h3 className="title"><a href="#">Mira Smith</a></h3>
+			        		            <p className="post">Heart Specialist</p>
 			        		        </div>
 			        		    </div>
+			        		    <div className="team-desc">
+			        		        <p className="desc">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculusmus. Donec quam felis...</p>
+			        		    </div>
+			        		    <ul className="social-info">
+			        		        <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
+			        		        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+			        		        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+			        		        <li><a href="#"><i className="fa fa-vimeo"></i></a></li>
+			        		    </ul>
 			        		</div>
 			        	</Col>
-			        </Row>
-			    </Container>
-			</div>
-
-			{/* Blog Part */}
-			<div id="tcd-blog" className="tcd-blog sec-spacer">
-			    <Container fluid={true}>
-			        <div className="sec-title top-border text-center pb-75 md-pb-50">
-			            <h2 className="title">Our Blog Post</h2>
-			            <p className="desc">There are many variation passages of Lorem Ipsum There are many variation passages of Lorem Ipsum <br />passages of LoremIpsum available passages of LoremIpsum available...</p>
-			        </div>
-			        <Row className="blog-slider">
-				        <Col>
-				        	<div className="blog-item">
-				        	    <div className="blog-img">
-				        	        <a href="#">
-				        	        	<img 
-				        	        		src={blogImage1} 
-				        	        		alt="Blog Image"
-				        	        	/>
-				        	        </a>
-				        	    </div>
-				        	    <div className="blog-content">
-				        	        <div className="left-part">
-				        	            <div className="single-part">
-				        	                <span className="date">25</span>
-				        	                <span className="date">May</span>
-				        	            </div>
-				        	            <div className="single-part">
-				        	                <span>Likes: 10</span>
-				        	            </div>
-				        	            <div className="single-part">
-				        	                <span>08</span>
-				        	                <span>Comments</span>
-				        	            </div>
-				        	        </div>
-				        	        <div className="right-part">
-				        	            <h4 className="title"><a href="#">New Chicago school budget relies on the state
-				        	                pension</a></h4>
-				        	            <p className="desc">There are many variation passages of Lorem Ipsum There are many variation
-				        	                passages oform pasages of Ipsum available...</p>
-				        	            <a className="blog-btn" href="#">Read More</a>
-				        	        </div>
-				        	    </div>
-				        	</div>
-				        </Col>
-				        <Col>
-				        	<div className="blog-item">
-				        	    <div className="blog-img">
-				        	        <a href="#">
-				        	        	<img 
-				        	        		src={blogImage2} 
-				        	        		alt="Blog Image"
-				        	        	/>
-				        	        </a>
-				        	    </div>
-				        	    <div className="blog-content">
-				        	        <div className="left-part">
-				        	            <div className="single-part">
-				        	                <span className="date">25</span>
-				        	                <span className="date">May</span>
-				        	            </div>
-				        	            <div className="single-part">
-				        	                <span>Likes: 10</span>
-				        	            </div>
-				        	            <div className="single-part">
-				        	                <span>08</span>
-				        	                <span>Comments</span>
-				        	            </div>
-				        	        </div>
-				        	        <div className="right-part">
-				        	            <h4 className="title"><a href="#">New Chicago school budget relies on the state
-				        	                pension</a></h4>
-				        	            <p className="desc">There are many variation passages of Lorem Ipsum There are many variation
-				        	                passages oform pasages of Ipsum available...</p>
-				        	            <a className="blog-btn" href="#">Read More</a>
-				        	        </div>
-				        	    </div>
-				        	</div>
-				        </Col>
-				        <Col>
-				        	<div className="blog-item">
-				        	    <div className="blog-img">
-				        	        <a href="#">
-				        	        	<img 
-				        	        		src={blogImage3}
-				        	        		alt="Blog Image"
-				        	        	/>
-				        	        </a>
-				        	    </div>
-				        	    <div className="blog-content">
-				        	        <div className="left-part">
-				        	            <div className="single-part">
-				        	                <span className="date">25</span>
-				        	                <span className="date">May</span>
-				        	            </div>
-				        	            <div className="single-part">
-				        	                <span>Likes: 10</span>
-				        	            </div>
-				        	            <div className="single-part">
-				        	                <span>08</span>
-				        	                <span>Comments</span>
-				        	            </div>
-				        	        </div>
-				        	        <div className="right-part">
-				        	            <h4 className="title"><a href="#">New Chicago school budget relies on the state
-				        	                pension</a></h4>
-				        	            <p className="desc">There are many variation passages of Lorem Ipsum There are many variation
-				        	                passages oform pasages of Ipsum available...</p>
-				        	            <a className="blog-btn" href="#">Read More</a>
-				        	        </div>
-				        	    </div>
-				        	</div>
-				        </Col>
 			        </Row>
 			    </Container>
 			</div>
@@ -470,120 +510,274 @@ function HomePage() {
 			{/* Testimonial Part */}
 			<div id="tcd-testimonial" className="tcd-testimonial">
 			    <Container>
-			        <div className="testimonial-area testi-watermark-text">
-			            <Row className="testi-slider">
-				            <Col>
-				            	<div className="testi-item">
-				            	    <div className="testi-img">
-				            	        <img 
-				            	        	className="img" 
-				            	        	src={teamImage1} 
-				            	        	alt="Testimonial Image"
-				            	        />
-				            	        <div className="quote">
-				            	            <img 
-				            	            	src={quoteImage} 
-				            	            	alt="Quote Icon"
-				            	            />
-				            	        </div>
-				            	    </div>
-				            	    <div className="testi-info">
-				            	        <h6 className="title">Kori Anderson</h6>
-				            	        <span className="designation">Founder</span>
-				            	    </div>
-				            	    <div className="testi-desc">
-				            	        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt Neque porro quisquam est, qui dolorem
-				            	            ipsum...</p>
-				            	    </div>
-				            	</div>
-				            </Col>
-				            <Col>
-				            	<div className="testi-item">
-				            	    <div className="testi-img">
-				            	        <img 
-				            	        	className="img" 
-				            	        	src={teamImage2} 
-				            	        	alt="Testimonial Image"
-				            	        />
-				            	        <div className="quote">
-				            	            <img 
-				            	            	src={quoteImage} 
-				            	            	alt="Quote Icon"
-				            	            />
-				            	        </div>
-				            	    </div>
-				            	    <div className="testi-info">
-				            	        <h6 className="title">Kori Anderson</h6>
-				            	        <span className="designation">Founder</span>
-				            	    </div>
-				            	    <div className="testi-desc">
-				            	        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt Neque porro quisquam est, qui dolorem
-				            	            ipsum...</p>
-				            	    </div>
-				            	</div>
-				            </Col>
-			            </Row>
-			        </div>
+		            <Row className="testi-slider">
+			            <Col>
+			            	<div className="testi-item">
+			            	    <div className="testi-img">
+			            	        <img 
+			            	        	className="quote" 
+			            	        	src={quoteImage} 
+			            	        	alt="Testimonial Image"
+			            	        />
+			            	    </div>
+			            	    <div className="testi-info">
+			            	        <h5 className="testi-title">Imelda M. Jefferson</h5>
+			            	        <div className="testi-content">
+		                                <p className="desc">But I must explain to you how all this to mistaken idea of denouncing But I must explain to you how all this to mistaken idea of denouncing idea of denouncing...</p>
+		                            </div>
+			            	    </div>
+			            	</div>
+			            </Col>
+		            </Row>
+			    </Container>
+			</div>
+
+			{/* Blog & Faq Part */}
+			<div id="tcd-double-section" className="tcd-double-section pt-110 pb-110 md-pt-70 md-pb-70">
+			    <Container>
+				    <Row>
+				    	<Col>
+					    	<div className="tcd-faq">
+					    	    <div className="sec-title mb-40">
+					    	        <h2 className="title mb-20">Our Department</h2>
+					    	        <p className="desc mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit <br />veniam quis nostrud exercitation...</p>
+					    	    </div>
+					    	    <div id="tcd-accordion" className="tcd-accordion">
+					    	        <div className="accordion-item mb-15">
+					    	            <div className="accordion-header" id="heading-1">
+					    	            <h4 className="mb-0">
+					    	                <button className="accordion-btn collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+					    	                    General Health Care
+					    	                </button>
+					    	            </h4>
+					    	            </div>
+					    	            <div id="collapse-1" className="collapse" aria-labelledby="heading-1" data-parent="#tcd-accordion">
+					    	                <div className="accordion-body">
+					    	                    <span className="d-block mb-30">Lorem ipsum dolor sit amet consectetur adipisicing elit veniam quis nostrud exercitation A collection of textile samples lay spread out on the table - Samsa was a travelling</span>
+					    	                    <span className="mb-0">salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine...</span>
+					    	                </div>
+					    	            </div>
+					    	        </div>
+					    	        <div className="accordion-item mb-15">
+					    	            <div className="accordion-header" id="heading-2">
+					    	            <h4 className="mb-0">
+					    	                <button className="accordion-btn collapsed" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+					    	                    Cancer Care
+					    	                </button>
+					    	            </h4>
+					    	            </div>
+					    	            <div id="collapse-2" className="collapse" aria-labelledby="heading-2" data-parent="#tcd-accordion">
+					    	                <div className="accordion-body">
+					    	                    <span className="d-block mb-30">Lorem ipsum dolor sit amet consectetur adipisicing elit veniam quis nostrud exercitation A collection of textile samples lay spread out on the table - Samsa was a travelling</span>
+					    	                    <span className="mb-0">salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine...</span>
+					    	                </div>
+					    	            </div>
+					    	        </div>
+					    	        <div className="accordion-item mb-15">
+					    	            <div className="accordion-header" id="heading-3">
+					    	            <h4 className="mb-0">
+					    	                <button className="accordion-btn collapsed" data-toggle="collapse" data-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+					    	                    Dental Cleaning Care
+					    	                </button>
+					    	            </h4>
+					    	            </div>
+					    	            <div id="collapse-3" className="collapse" aria-labelledby="heading-3" data-parent="#tcd-accordion">
+					    	                <div className="accordion-body">
+					    	                    <span className="d-block mb-30">Lorem ipsum dolor sit amet consectetur adipisicing elit veniam quis nostrud exercitation A collection of textile samples lay spread out on the table - Samsa was a travelling</span>
+					    	                    <span className="mb-0">salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine...</span>
+					    	                </div>
+					    	            </div>
+					    	        </div>
+					    	        <div className="accordion-item">
+					    	            <div className="accordion-header" id="heading-4">
+					    	            <h4 className="mb-0">
+					    	                <button className="accordion-btn" data-toggle="collapse" data-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+					    	                    Nurology Department
+					    	                </button>
+					    	            </h4>
+					    	            </div>
+					    	            <div id="collapse-4" className="collapse show" aria-labelledby="heading-4" data-parent="#tcd-accordion">
+					    	                <div className="accordion-body mb-0">
+					    	                    <span className="d-block mb-30">Lorem ipsum dolor sit amet consectetur adipisicing elit veniam quis nostrud exercitation A collection of textile samples lay spread out on the table - Samsa was a travelling</span>
+					    	                    <span className="mb-0">salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine...</span>
+					    	                </div>
+					    	            </div>
+					    	        </div>
+					    	    </div>
+					    	</div>
+					    </Col>
+					    <Col>
+					    	<div id="tcd-blog" className="tcd-blog">
+					    	    <div className="sec-title mb-40">
+					    	        <h2 className="title mb-20">Our Blog</h2>
+					    	        <p className="desc mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit <br />veniam quis nostrud exercitation...</p>
+					    	    </div>
+					    	    <div className="blog-item mb-25 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="800ms">
+					    	        <div className="blog-img">
+					    	            <a href="#">
+					    	            	<img 
+					    	            		src={blogImage1} 
+					    	            		alt="Blog Image"
+					    	            	/>
+					    	            </a>
+					    	        </div>
+					    	        <div className="blog-content">
+					    	            <div className="top-part">
+					    	                <span className="date">12 January</span>
+					    	            </div>
+					    	            <div className="content-part">
+					    	                <h4 className="title"><a href="#">Dental Operation</a></h4>
+					    	                <p className="desc">A wonderful serenity has taken <br />possessionof my entire soul like these....</p>
+					    	            </div>
+					    	            <div className="comment-part">
+					    	                <span><i className="fa fa-thumbs-o-up"></i> 08</span>
+					    	                <span><i className="fa fa-comment-o"></i> 01</span>
+					    	            </div>
+					    	        </div>
+					    	    </div>
+					    	    <div className="blog-item wow fadeInUp" data-wow-duration="800ms" data-wow-delay="800ms">
+					    	        <div className="blog-img">
+					    	            <a href="#">
+					    	            	<img 
+					    	            		src={blogImage2} 
+					    	            		alt="Blog Image"
+					    	            	/>
+					    	            </a>
+					    	        </div>
+					    	        <div className="blog-content">
+					    	            <div className="top-part">
+					    	                <span className="date">12 January</span>
+					    	            </div>
+					    	            <div className="content-part">
+					    	                <h4 className="title"><a href="#">Dental Operation</a></h4>
+					    	                <p className="desc">A wonderful serenity has taken <br />possessionof my entire soul like these....</p>
+					    	            </div>
+					    	            <div className="comment-part">
+					    	                <span><i className="fa fa-thumbs-o-up"></i> 08</span>
+					    	                <span><i className="fa fa-comment-o"></i> 01</span>
+					    	            </div>
+					    	        </div>
+					    	    </div>
+					    	</div>
+					    </Col>
+				    </Row>
 			    </Container>
 			</div>
 
 			{/* Footer Part */}
-			<div id="tcd-footer" className="tcd-footer">
-			    <Container>
-			        <Row className="footer-content">
-			            <Col>
-			                <div className="footer-widget">
-			                    <div className="footer-logo">
-			                        <a href="#">
-			                            <img 
-			                            	src={mainLogo} 
-			                            	alt="Logo"
+			<div id="tcd-timing-newsletter" className="tcd-timing-newsletter newsletter-bg">
+			    <Row className="align-items-center margin-0">
+			        <Col lg="7">
+			            <div className="tcd-newsletter">
+			                <h2 className="title">Ask Your Own Question</h2>
+			                <h5 className="subtitle">A collection of textile samples lay spread out on the table samples lay...</h5>
+			                <div className="newsletter-part">
+			                    <form className="mb-0">
+			                        <div className="form-group mb-0">
+			                            <input 
+			                            	type="email" 
+			                            	name="your-email" 
+			                            	placeholder="Type Your Message..." 
 			                            />
-			                        </a>
-			                    </div>
-			                    <p className="copyright-text">© 2020 <a href="#">Budget.com</a>. All Rights Reserved.</p>
-			                    <div className="footer-social">
-			                        <ul className="social-icon">
-			                            <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-			                            <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-			                            <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-			                        </ul>
-			                    </div>
+			                            <button className="btn-newsletter"><i className="fa fa-long-arrow-right"></i></button>
+			                        </div>
+			                    </form>
 			                </div>
-			            </Col>
-			            <Col>
-			                <div className="footer-widget">
-			                    <h4 className="footer-title">Latest Information</h4>
-			                    <p>Information Update</p>
-			                    <ul className="footer-menu">
-			                        <li><a href="#">Home</a></li>
-			                        <li><a href="#">About Us</a></li>
-			                        <li><a href="#">Departent</a></li>
-			                        <li><a href="#">Event</a></li>
-			                    </ul>
-			                </div>
-			            </Col>
-			            <Col>
-			                <div className="footer-widget">
-			                    <h4 className="footer-title">Contact Us</h4>
-			                    <p>Social Address</p>
-			                    <div className="tcd-newsletter">
-			                        <form className="mb-0">
-			                            <div className="form-group">
-			                                <input type="email" name="your-email" placeholder="Your Email" />
-			                                <button className="btn-newsletter"><i className="fa fa-paper-plane-o" aria-hidden="true"></i>
-			                                </button>
-			                            </div>
-			                        </form>
-			                    </div>
+			            </div>
+			        </Col>
 
-			                    <div className="footer-address">
-			                        <a className="phone" href="tel:01234567">(+1) 212-946-2707</a><a href="mailto:Hello@agency.com">Hello@agency.com</a>
-			                        <span>12W 34th St, bangladesh</span>
+			        <Col lg="5" className="pr-0 md-pl-0">
+			            <div className="tcd-time-table">
+			                <h2 className="timing-title mb-10">Working Hours</h2>
+			                <h5 className="subtitle mb-20">Checkout EMedical's Working Time </h5>
+			                <div className="table-part">
+			                    <div className="single-time pt-0">
+			                        <span className="day">Monday</span>
+			                        <span className="time">8AM-9PM</span>
+			                        <span className="btn-part"><a className="primary-btn timing-btn" href="#">Book Now <i className="fa fa-clock-o"></i></a></span>
+			                    </div>
+			                    <div className="single-time">
+			                        <span className="day">Tuesday</span>
+			                        <span className="time">8AM-9PM</span>
+			                        <span className="btn-part"><a className="primary-btn timing-btn" href="#">Book Now <i className="fa fa-clock-o"></i></a></span>
+			                    </div>
+			                    <div className="single-time">
+			                        <span className="day">Wednesday</span>
+			                        <span className="time">8AM-9PM</span>
+			                        <span className="btn-part"><a className="primary-btn timing-btn" href="#">Book Now <i className="fa fa-clock-o"></i></a></span>
+			                    </div>
+			                    <div className="single-time">
+			                        <span className="day">Thursday</span>
+			                        <span className="time">8AM-9PM</span>
+			                        <span className="btn-part"><a className="primary-btn timing-btn" href="#">Book Now <i className="fa fa-clock-o"></i></a></span>
+			                    </div>
+			                    <div className="single-time">
+			                        <span className="day">Friday</span>
+			                        <span className="time">8AM-9PM</span>
+			                        <span className="btn-part"><a className="primary-btn timing-btn" href="#">Book Now <i className="fa fa-clock-o"></i></a></span>
+			                    </div>
+			                    <div className="single-time closed">
+			                        <span className="day">Saturday-Sunday</span>
+			                        <span className="time">Closed</span>
+			                        <span className="btn-part"><a className="primary-btn timing-btn" href="#">Book Now <i className="fa fa-clock-o"></i></a></span>
 			                    </div>
 			                </div>
-			            </Col>
-			        </Row>
+			                <h2 className="timing-title mb-20">Need Flexible Time?</h2>
+			                <a className="primary-btn icon-btn wow fadeInUp" data-wow-duration="800ms" data-wow-delay="800ms" href="#">Suggest Checkup Time <i className="fa fa-long-arrow-right"></i></a>
+			            </div>
+			        </Col>
+			    </Row>
+			</div>
+
+			{/* Footer Part */}
+			<div id="tcd-footer" className="tcd-footer pt-110 md-pt-70">
+			    <Container>
+			    	<div className="footer-top-part">
+				        <Row>
+				            <Col>
+				                <div className="footer-widget">
+				                	<h4 className="footer-title">Quick Links</h4>
+				                	<ul className="footer-menu left">
+				                	    <li><a href="#">Doctor</a></li>
+				                	    <li><a href="#">Services</a></li>
+				                	    <li><a href="#">Gallery</a></li>
+				                	    <li><a href="#">News</a></li>
+				                	</ul>
+				                	<ul className="footer-menu right">
+				                	    <li><a href="#">Terms of Use</a></li>
+				                	    <li><a href="#">Privacy & Policy</a></li>
+				                	    <li><a href="#">Disclaimer</a></li>
+				                	    <li><a href="#">Sitemap</a></li>
+				                	</ul>				                    
+				                </div>
+				            </Col>
+				            <Col>
+				                <div className="footer-widget">
+				                    <h4 className="footer-title">Opening Hours</h4>
+				                    <div className="footer-schedule">
+	                                    <ul className="appointment">
+	                                        <li><span className="date">Monday - Friday</span><span className="time">9 am - 4 pm</span></li>
+	                                        <li><span className="date">Monday - Friday</span><span className="time">9 am - 4 pm</span></li>
+	                                        <li><span className="date">Monday - Friday</span><span className="time">9 am - 4 pm</span></li>
+	                                    </ul>
+	                                </div>
+				                </div>
+				            </Col>
+				            <Col>
+				                <div className="footer-widget">
+				                    <h4 className="footer-title">Contact Us</h4>
+				                    <div className="footer-desc">
+	                                    <p>Lorem ipsum dolor sit amet,<br /> ipsum consectetuer</p>
+	                                    <p className="mb-10">Phone: <a className="phone" href="tel:01234567">+088-123456</a></p>
+	                                    <p>Email: <a className="email" href="mailto:your@website.com">your@website.com</a></p>
+	                                </div>
+				                </div>
+				            </Col>
+				        </Row>
+			        </div>
+			        <div className="footer-bottom-part text-center pt-75 pb-100 md-pt-35 md-pb-60">
+			            <p className="copyright mb-0">Copyright 2018-2020 Medical Theme by <a href="#">The Codude</a></p>
+			        </div>
 			    </Container>
 			</div>
 		</div>
