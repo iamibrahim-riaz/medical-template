@@ -203,7 +203,7 @@ button {
   margin-bottom: 30px;
 }
 .mb-40 {
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
 .mb-50 {
   margin-bottom: 50px;
@@ -423,6 +423,8 @@ button {
   position: relative;
   padding-top: 15px;
   z-index: 9;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .sec-title .title {
   font-size: 35px;
